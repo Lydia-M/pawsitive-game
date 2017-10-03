@@ -1,4 +1,5 @@
-###Petster
+#This is my submission for I/O Avenue's Project One: Game On.
+####Petster
 ###A REPL Game for Children Who Think They Are Ready for a Pet 
 #
 #
