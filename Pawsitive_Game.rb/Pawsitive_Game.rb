@@ -1,5 +1,4 @@
-#This is my submission for I/O Avenue's Project One: Game On.
-####Petster
+###Pawsitive
 ###A REPL Game for Children Who Think They Are Ready for a Pet 
 #
 #
@@ -16,10 +15,10 @@ case option
 ###DOG SCENARIO
 when "dog" , "Dog" , "DOG" , "a dog" , "A Dog" , "A dog" , "I want a dog" , 
     "i want a dog", "I want a dog."
-    puts "Woofs and tail wags! What will you name your dog?"
+    puts "\nWoofs and tail wags! What will you name your dog?\n"
     
     dog_name = gets.chomp
-        puts "#{dog_name.upcase}! What a great name!"
+        puts "\n#{dog_name.upcase}! What a great name!"
         puts "Let's chat more about how you will care for #{dog_name.capitalize}...\n \n"
     
     NewDogSteps = ["e. Research which breed of dog is best for your lifestyle." , 
@@ -36,16 +35,65 @@ when "dog" , "Dog" , "DOG" , "a dog" , "A Dog" , "A dog" , "I want a dog" ,
     Ordered_Response = gets.chomp
     
     case Ordered_Response
-    when "e c b f a d" , "e. c. b. f. a. d." , "e, c, b, f, a, d" , "E C B F A D" , "E, C, B, F, A, D" , "E. C. B. F. A. D." , "e., c., b., f., a., d." , "E., C., B., F., A., D." , "ecbfad" , "ECBFAD"
-    puts "\n Great work! You've been doing your doggie homework. I think you're ready for your very own #{dog_name.capitalize}!"
+    when "e c b f a d" , "e. c. b. f. a. d." , "e, c, b, f, a, d" , "E C B F A D" , "E, C, B, F, A, D" ,
+        "E. C. B. F. A. D." , "e., c., b., f., a., d." , "E., C., B., F., A., D." , "ecbfad" , "ECBFAD"
+    puts "\n--> Great work! You've been doing your doggie homework. One step closer to your very own #{dog_name.capitalize}!"
     
     else
     puts "I think we've got a little more work to do before we get #{dog_name.capitalize}."
     puts "Look over those steps and try again."
-end
+    end
+    
+    
+ 
+        puts "\nAlright - we've got the BIG picture down but what about the day to day?"
+        puts "What will it look like to take care of #{dog_name.capitalize} every day?"
+        puts "Let's talk about it..."
+        
+        puts "\nFOOD is very important for all animals! What do dogs eat - ~pizza~ or kibble?"
+    
+        Kibble = gets.chomp
+        case Kibble
+            when "kibble" , "Kibble" , "KIBBLE"
+        puts "\nKIBBLE! Dogs eat kibble! Let's figure out how much kibble #{dog_name.capitalize} needs."
+        end
+    
+        puts "On average, dogs should eat ONE CUP of kibble for every TEN POUNDS that they weigh."
+        
+        RandDogWeight = (10 + rand(70))
+        
+        puts "\nLet's says that #{dog_name.capitalize} weighs #{RandDogWeight} pounds."
+        puts "How much kibble should you feed #{dog_name.capitalize} each day, rounded to the nearest whole cup?"
+        
+        DogFood = gets.chomp
+        case DogFood
+        when "#{(((RandDogWeight)/10.0).round)}" , "#{(((RandDogWeight)/10.0).round)} cup" , "#{(((RandDogWeight)/10.0).round)} cups"
+        puts "\nExcellent! #{dog_name.capitalize} will be well-fed."
+            
+        else
+        puts "Be careful! It is unhealthy to overfeed or underfeed #{dog_name.capitalize}."
+        puts "Based on #{dog_name}'s randomized weight, #{RandDogWeight} pounds, he should be"
+        puts "eating #{(((RandDogWeight)/10.0).round)} cups of kibble a day."
+        end
+    
+    puts "\nI am PAWSITIVE you are ready to take on pet-ownership!!!"
+    puts "Type your name below to see your new best friend, #{dog_name.upcase}!"
+    
+    UserName = gets.chomp
+        puts "   _=,_"
+        puts "o_/6 /#\\"
+        puts "\\__ |##/"
+        puts "  ='|--\\"
+        puts "   /   #'-."
+        puts "   \\#|_   _'-. /"
+        puts "     |/ \\_( # |"""
+        puts "    C/ ,--___/"
+        puts "#{UserName.upcase} AND #{dog_name.upcase} FOREVER!!!"
+        
+        
     
 ###CAT SCENARIO    
-when "cat" , "Cat" , "CAT" , "a cat" , "A Cat", "A cat" , "I want a cat" ,"i want a cat", "I want a cat."
+when "cat" , "Cat" , "CAT" , "a cat" , "A Cat" , "A cat" , "I want a cat" ,"i want a cat", "I want a cat."
     puts "Meow meow! What will you name your cat?"
     
     cat_name = gets.chomp
